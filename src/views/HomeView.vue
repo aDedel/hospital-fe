@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import PatientDashboard from '@/components/PatientDashboard.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <PatientDashboard :title="$t('Quarantine')" />
   </main>
 </template>
