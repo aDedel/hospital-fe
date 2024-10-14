@@ -3,14 +3,15 @@ import I18NextVue from 'i18next-vue'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-http-backend'
 import type { App } from 'vue'
+import { LanguageEnum } from './configs/language'
 
 export const i18nextPromise = i18next
   .use(Backend)
   .use(LanguageDetector)
   .init({
     ns: ['common'],
-    supportedLngs: ['en', 'fr'],
-    fallbackLng: 'en',
+    supportedLngs: Object.values(LanguageEnum),
+    fallbackLng: LanguageEnum.En,
     interpolation: {
       escapeValue: false,
     },

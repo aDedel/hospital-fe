@@ -10,7 +10,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        error: colors.red[600]
+        'primaryColor': colors.purple[500],
+        'secondaryColor': colors.sky[600],
+        'error': colors.red[600],
       }
     },
   },
